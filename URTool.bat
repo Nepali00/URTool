@@ -466,7 +466,6 @@ call :Detect_vendor_size
 echo %SIZE%>>01-Project\1-Sources\sys_size.txt
 echo.
 if exist 01-Project\vendor echo %VSIZE%>>01-Project\1-Sources\vend_size.txt
-if exist 01-Project\1-Sources\vendor.img !busybox! rm -rf 01-Project\1-Sources\vendor.img >nul
 if exist 01-Project\1-Sources\vendor.transfer.list !busybox! rm -rf 01-Project\1-Sources\vendor.transfer.list >nul
 echo.
 cls
@@ -494,7 +493,6 @@ echo.
 %cecho% *          Done, see {0a}01-Project\system{#} folder.
 echo.
 echo.
-if exist 01-Project\1-Sources\system.img !busybox! rm -rf 01-Project\1-Sources\system.img >nul 2>nul
 if exist 01-Project\1-Sources\system.transfer.list !busybox! rm -rf 01-Project\1-Sources\system.transfer.list >nul 2>nul
 if not exist 01-Project\1-Sources\file_contexts call :File_Context_converter >nul 2>nul
 TIMEOUT /T 3 /nobreak > NUL
